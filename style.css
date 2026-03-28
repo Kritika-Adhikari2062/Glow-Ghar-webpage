@@ -1,0 +1,432 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+html{
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+}
+.container{
+    width: 100%;
+    height: 100vh;
+
+    
+}
+body{
+    margin-top: 80px;
+    background: linear-gradient(to right, #ffefba, #ffffff);
+    
+}
+.nav{
+    position: fixed;
+   
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    border-bottom: 1px solid grey;
+    box-shadow: 2px 0px 5px grey;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 1000;
+    
+}
+.logo{
+    font-size: 32px;
+    font-weight: bold;
+    cursor: pointer;
+    
+}
+.logo:hover{
+     transform: scale(1.1);
+    transition: 0.5s;
+    color:seagreen ;
+}
+.menu a{
+     
+    position: relative;
+    flex-direction: column;
+    text-decoration: none;
+    gap: 15px;
+    padding: 10px  20px;
+    margin: 5px;
+    font-weight: bold;
+    transition: 0.5s;
+
+}
+.menu a:hover{
+    color: coral;
+}
+.body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform-origin: center;
+    transform-style: preserve-3d;
+    perspective: 2000px;/*3d look*/
+    margin-top: 50px;
+    padding: 0 10%;
+}
+
+.menu  a:last-child{
+    background: black;
+    color: aliceblue;
+}
+
+.menu a:last-child:hover{
+    color: coral;
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+.left{
+    flex-basis: 50%;
+    margin: 45px;
+    animation: animate 3s linear infinite;
+    
+
+}
+.left img{
+    width: 300px;
+    height: auto;
+    object-fit: cover;
+}
+@keyframes animate{/*to run animation*/
+    0%{
+        transform: scale(1.1);
+    }
+    50%{
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(1.1);
+    }
+
+}
+.right{
+    flex-basis: 50%;
+    max-width: 400px;
+    margin-left: 100px;
+    
+}
+.right h1{
+    font-size: 50px ;
+}
+.right p{
+    font-size: 25px;
+    margin:20px 0px;
+}
+.btn{
+    background: black;
+    color:#2ecc71;
+    font-weight: bold;
+    border: none;
+    outline: none;
+    padding: 10px 20px;
+    margin-bottom: 10px;
+    gap: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.btn:hover{
+    transform: scale(1.05);
+    transition: 0.5s;
+    color: #2ecc71;
+}
+.body a{
+    color: skyblue;
+    transition: 0.3s;
+
+}
+.body a:hover{
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+#Featured{
+    display: block;
+    padding-bottom: 60px 0 30px 0 ;
+   background-color: transparent;
+   font-weight: 800;
+    padding-top: 0;
+    margin-top: 100px;
+    margin-bottom: 40px;
+    font-size: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #333;
+}
+#Featured h1{
+    color: black;
+    text-shadow: wheat;
+}
+
+.wrapper{
+    display: grid;
+    grid-template-columns: repeat(4,20%);
+    grid-auto-rows: minmax(200px,auto);
+    grid-gap: 1em;
+    justify-content: center;
+    cursor: pointer;
+}
+.wrapper div{
+    border: 1px solid grey;
+    position: relative;
+    
+}
+.wrapper div img{
+    width: 100%;
+    overflow: hidden;
+    width: 300px;
+    height: auto;
+    object-fit: cover;
+}
+.box-1{
+    grid-row: 1/3;
+    grid-column: 1/3;
+    
+    
+}
+.box-1 img{
+    width: 300px;
+    height: auto;
+    object-fit: cover;
+   
+}
+.price{
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: none;
+    text-align: left;
+    padding: 5px;
+    bottom: auto;
+    background-color: black;
+    color: #e67e22;
+    width: fit-content;
+    font-size: 20px;
+    border-radius: 4px;
+    z-index: 100;
+    
+    
+}
+.wrapper div, .man-box{
+    
+    background-filter:blur(10px);
+    border: none;
+    border-radius: 15px;
+    padding: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ;
+}
+
+
+.wrapper div:hover{
+    transform: translate(-10px);
+}
+.wrapper img:hover{
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+#Brand{
+    padding: 80px 0px;
+}
+#Brand h1{
+   font-size: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #333;
+    font-weight: bold;
+} 
+
+.man-row{
+    display: grid;
+  
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+.man-box{
+
+    background-color: li;
+    
+    box-shadow: 2px 3px 5px grey;
+    padding: 10px;
+    text-align: center;
+    border-radius: 10px;
+    transition: 0.4s;
+}
+
+
+#dot{
+    padding: 80px 0px;
+}
+.man-row{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+.man-box{
+    flex-basis: 15%;
+    box-shadow: 2px 3px 5px grey;
+    padding: 10px;
+    text-align: center;
+}
+.man-box img{
+    width: 100%;
+}
+.man-box h2{
+    margin: 20px 0px;
+}
+.man-box h3{
+    background: black;
+    color: white;
+    
+}
+.man-box:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: 0.5s linear;
+}
+
+
+#plum{
+    padding: 80px 0px;
+}
+.man-row{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+.man-box{
+    flex-basis: 15%;
+    box-shadow: 2px 3px 5px grey;
+    padding: 10px;
+    text-align: center;
+}
+.man-box img{
+    width: 100%;
+}
+.man-box h2{
+    margin: 20px 0px;
+}
+.man-box h3{
+    background: black;
+    color: white;
+    
+}
+.man-box:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: 0.5s linear;
+}
+#derma{
+    padding: 80px 0px;
+}
+.man-row{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+.man-box{
+    flex-basis: 15%;
+    box-shadow: 2px 3px 5px grey;
+    padding: 10px;
+    text-align: center;
+}
+.man-box img{
+    width: 100%;
+}
+.man-box h2{
+    margin: 20px 0px;
+}
+.man-box h3{
+    background: black;
+    color: white;
+    
+}
+.man-box:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: 0.5s linear;
+}
+#derma{
+    padding: 80px 0px;
+}
+.man-row{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+.man-box{
+    flex-basis: 15%;
+    box-shadow: 2px 3px 5px grey;
+    padding: 10px;
+    text-align: center;
+}
+.man-box img{
+    width: 100%;
+}
+.man-box h2{
+    margin: 20px 0px;
+}
+.man-box h3{
+    background: black;
+    color: white;
+    
+}
+.man-box:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: 0.5s linear;
+}
+
+#footer{
+    position: sticky;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: black;
+    color: white;
+    padding: 20px 0;
+    margin-top: 100px;
+    gap: 10px;
+    clear: both;
+}
+
+.icon{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+.icon a{ 
+    font-size: 25px;
+    color: #333;
+    text-decoration: none;
+    transition: all  0.5s;
+    display: inline-block;
+}
+.icon a:hover{
+    transform: translate(-5px);
+}
+.icon a .bxl-facebook:hover{
+    color: #1877f2;
+}
+.icon a .bxl-instagram:hover{
+    color: #E4405f;
+}
+.icon a .bxl-tiktok:hover{
+    color: #000000;
+}
+.icon a .bxl-whatsapp:hover{
+    color: #25d366;
+}
